@@ -553,6 +553,7 @@ body {
   display: flex;
   gap: 10px;
   margin-bottom: 15px;
+  width: 80%;
 }
 
 .comment-avatar img {
@@ -600,6 +601,38 @@ body {
   color: #555;
   margin-top: 6px;
   margin-left: 12px;
+}
+.comment-header-options {
+  position: relative;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.comment-header-options .more-options-icon {
+  font-size: 18px;
+  color: #666;
+}
+
+.comment-header-options .more-options-dropdown {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100px;
+  z-index: 200;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header-options .option {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.comment-header-options .option:hover {
+  background-color: #f0f0f0;
 }
 
 /* rightbar  */

@@ -61,3 +61,17 @@ document.addEventListener("click", function (e) {
     }
   });
 });
+function toggleCommentOptions(icon) {
+  const dropdown = icon.nextElementSibling;
+  dropdown.classList.toggle("hidden");
+}
+
+// Ẩn dropdown nếu click ra ngoài
+document.addEventListener("click", function (e) {
+  document.querySelectorAll(".comment-header-options").forEach(container => {
+    if (!container.contains(e.target)) {
+      const dropdown = container.querySelector(".more-options-dropdown");
+      if (dropdown) dropdown.classList.add("hidden");
+    }
+  });
+});

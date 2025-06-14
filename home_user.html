@@ -142,6 +142,7 @@
                     <div class="filter-option">Phù hợp nhất</div>
                 </div>
             </div>
+
             <!-- bài viết  -->
             <div class="post-card" style="grid-column: span 8;">
                 <div class="post-header">
@@ -164,7 +165,8 @@
                     </div>
                     <!-- chức năng  -->
                     <div class="post-header-options">
-                        <iconify-icon icon="ph:dots-three-vertical-bold" class="more-options-icon" onclick="togglePostOptions(this)" style="transform: rotate(90deg);"></iconify-icon>
+                        <iconify-icon icon="ph:dots-three-vertical-bold" class="more-options-icon"
+                            onclick="togglePostOptions(this)" style="transform: rotate(90deg);"></iconify-icon>
                         <div class="more-options-dropdown hidden">
                             <div class="option">Sửa</div>
                             <div class="option">Xóa</div>
@@ -240,15 +242,24 @@
                                 <div class="comment-action">Trả lời</div>
                             </div>
                         </div>
+                        <div class="comment-header-options">
+                            <iconify-icon icon="ph:dots-three-vertical-bold" class="more-options-icon"
+                                onclick="toggleCommentOptions(this)" style="transform: rotate(90deg);"></iconify-icon>
+                            <div class="more-options-dropdown hidden">
+                                <div class="option">Sửa</div>
+                                <div class="option">Xóa</div>
+                            </div>
+                        </div>
                     </div>
+                    
                     <!-- Một bình luận -->
                     <div class="comment">
                         <div class="comment-avatar">
                             <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
                                 alt="avatar">
                         </div>
+                        <!-- Nội dung chính -->
                         <div class="comment-body">
-                            <!-- Nội dung chính -->
                             <div class="comment-content">
                                 <div class="comment-user">
                                     <span class="user-name">Nguyễn Văn A</span>
@@ -280,164 +291,12 @@
                                 <div class="comment-action">Trả lời</div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Một bình luận -->
-                    <div class="comment">
-                        <div class="comment-avatar">
-                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
-                                alt="avatar">
-                        </div>
-                        <div class="comment-body">
-                            <!-- Nội dung chính -->
-                            <div class="comment-content">
-                                <div class="comment-user">
-                                    <span class="user-name">Nguyễn Văn A</span>
-                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
-                                        điểm</span>
-                                </div>
-                                <div class="comment-text post-content">
-                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
-                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
-                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
-                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
-                                </div>
-                            </div>
-
-                            <!-- tương tác bình luận -->
-                            <div class="comment-actions">
-
-                                <div class="comment-time">2 giờ</div>
-
-                                <div class="action like-action" onclick="toggleLike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
-                                    <span class="like-text">12 thích</span>
-                                </div>
-
-                                <div class="action dislike-action" onclick="toggleDislike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
-                                        style="transform: rotate(180deg);"></iconify-icon>
-                                </div>
-                                <div class="comment-action">Trả lời</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Một bình luận -->
-                    <div class="comment">
-                        <div class="comment-avatar">
-                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
-                                alt="avatar">
-                        </div>
-                        <div class="comment-body">
-                            <!-- Nội dung chính -->
-                            <div class="comment-content">
-                                <div class="comment-user">
-                                    <span class="user-name">Nguyễn Văn A</span>
-                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
-                                        điểm</span>
-                                </div>
-                                <div class="comment-text post-content">
-                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
-                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
-                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
-                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
-                                </div>
-                            </div>
-
-                            <!-- tương tác bình luận -->
-                            <div class="comment-actions">
-
-                                <div class="comment-time">2 giờ</div>
-
-                                <div class="action like-action" onclick="toggleLike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
-                                    <span class="like-text">12 thích</span>
-                                </div>
-
-                                <div class="action dislike-action" onclick="toggleDislike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
-                                        style="transform: rotate(180deg);"></iconify-icon>
-                                </div>
-                                <div class="comment-action">Trả lời</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Một bình luận -->
-                    <div class="comment">
-                        <div class="comment-avatar">
-                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
-                                alt="avatar">
-                        </div>
-                        <div class="comment-body">
-                            <!-- Nội dung chính -->
-                            <div class="comment-content">
-                                <div class="comment-user">
-                                    <span class="user-name">Nguyễn Văn A</span>
-                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
-                                        điểm</span>
-                                </div>
-                                <div class="comment-text post-content">
-                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
-                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
-                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
-                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
-                                </div>
-                            </div>
-
-                            <!-- tương tác bình luận -->
-                            <div class="comment-actions">
-
-                                <div class="comment-time">2 giờ</div>
-
-                                <div class="action like-action" onclick="toggleLike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
-                                    <span class="like-text">12 thích</span>
-                                </div>
-
-                                <div class="action dislike-action" onclick="toggleDislike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
-                                        style="transform: rotate(180deg);"></iconify-icon>
-                                </div>
-                                <div class="comment-action">Trả lời</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Một bình luận -->
-                    <div class="comment">
-                        <div class="comment-avatar">
-                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
-                                alt="avatar">
-                        </div>
-                        <div class="comment-body">
-                            <!-- Nội dung chính -->
-                            <div class="comment-content">
-                                <div class="comment-user">
-                                    <span class="user-name">Nguyễn Văn A</span>
-                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
-                                        điểm</span>
-                                </div>
-                                <div class="comment-text post-content">
-                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
-                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
-                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
-                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
-                                </div>
-                            </div>
-
-                            <!-- tương tác bình luận -->
-                            <div class="comment-actions">
-
-                                <div class="comment-time">2 giờ</div>
-
-                                <div class="action like-action" onclick="toggleLike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
-                                    <span class="like-text">12 thích</span>
-                                </div>
-
-                                <div class="action dislike-action" onclick="toggleDislike(this)">
-                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
-                                        style="transform: rotate(180deg);"></iconify-icon>
-                                </div>
-                                <div class="comment-action">Trả lời</div>
+                        <div class="comment-header-options">
+                            <iconify-icon icon="ph:dots-three-vertical-bold" class="more-options-icon"
+                                onclick="toggleCommentOptions(this)" style="transform: rotate(90deg);"></iconify-icon>
+                            <div class="more-options-dropdown hidden">
+                                <div class="option">Sửa</div>
+                                <div class="option">Xóa</div>
                             </div>
                         </div>
                     </div>
