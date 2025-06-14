@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ User</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="home_user.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="home_user.js"></script>
+
+</head>
+
+<body>
+    <!-- header  -->
+    <div class="grid-12">
+        <div class="cell header">
+            <!-- header  -->
+            <div class="grid-12 header-content">
+                <!-- logo -->
+                <div class="cell logo" style="grid-column: span 2;">TLU Q&A Hub</div>
+                <!-- tìm kiếm -->
+                <div class="cell search-bar" style="grid-column: span 8;">
+                    <div class="search-wrapper">
+                        <iconify-icon icon="ic:round-search" class="search-icon"></iconify-icon>
+                        <input type="text" placeholder="Tìm kiếm trên Hub">
+                    </div>
+                </div>
+                <!--  -->
+                <div class="cell user-area" style="grid-column: span 2;">
+                    <div class="user-flex">
+                        <!-- thông báo  -->
+                        <div class="notify-circle">
+                            <iconify-icon icon="mdi:bell-outline" width="20" height="20"></iconify-icon>
+                        </div>
+                        <!-- ảnh đại diện  -->
+                        <div class="avatar-wrapper">
+                            <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                                alt="avatar">
+                            <div class="dropdown-circle">
+                                <iconify-icon icon="mdi:chevron-down" class="dropdown-icon" width="16"
+                                    height="16"></iconify-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="grid-12 main-layout">
+        <!-- left  -->
+        <div class="cell leftbar" style="grid-column: span 2;">
+            <!-- thông tin cá nhân  -->
+            <div class="user-info">
+                <!-- ảnh đại diện  -->
+                <div class="user-avatar">
+                    <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                        alt="Avatar" />
+                </div>
+                <!-- họ tên và điểm uy tín  -->
+                <div class="user-details">
+                    <div class="user-name">Hoàng Minh Sáng</div>
+                    <div class="user-reputation">
+                        <iconify-icon icon="ph:medal"></iconify-icon>
+                        <span>125 điểm</span>
+                    </div>
+                </div>
+            </div>
+            <!-- điều hướng  -->
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="icon-stack">
+                        <iconify-icon icon="material-symbols:event" class="icon-size"
+                            style="font-size: 40px; color: #000077;"></iconify-icon>
+                    </div>
+                    <span>Sự kiện</span>
+                </div>
+
+                <div class="nav-item">
+                    <iconify-icon icon="ph:ranking-fill" class="icon-size"
+                        style="color: #F34E6B; font-size: 40px;"></iconify-icon>
+                    <span>Xếp hạng</span>
+                </div>
+                <div class="nav-item">
+                    <div class="icon-circle" style="background-color: #1A84F4;">
+                        <iconify-icon icon="material-symbols:group" style="color: white;"></iconify-icon>
+                    </div>
+                    <span>Nhóm</span>
+                </div>
+                <div class="nav-item">
+                    <div class="icon-circle " class="icon-size" style="background-color: #E9EB7B;">
+                        <iconify-icon icon="solar:heart-bold" style="color: #f8002d;"></iconify-icon>
+                    </div>
+                    <span>Hiến máu</span>
+                </div>
+                <div class="nav-item">
+                    <iconify-icon icon="mingcute:link-fill" style="color: #003B95;"></iconify-icon>
+                    <span>Liên kết</span>
+                </div>
+                <div class="nav-item">
+                    <iconify-icon icon="arcticons:openai-chatgpt"></iconify-icon>
+                    <span>Chat GPT</span>
+                </div>
+                <div class="nav-item">
+                    <iconify-icon icon="ri:download-cloud-fill" style="color: #003B95;"></iconify-icon>
+                    <span>Đã lưu</span>
+                </div>
+                <div class="nav-item">
+                    <iconify-icon icon="solar:folder-bold" class="icon-size" style="color: #F2EA57;"></iconify-icon>
+                    <span>Tài liệu</span>
+                </div>
+                <div class="nav-item">
+                    <div class="icon-circle" style="background-color: #D9D9D9;">
+                        <iconify-icon class="icon-size" icon="material-symbols:help-outline"
+                            style="color: black; font-size: 40px;"></iconify-icon>
+                    </div>
+                    <span>Hướng dẫn</span>
+                </div>
+            </div>
+        </div>
+        <!-- main  -->
+        <div class="cell main-content" style="grid-column: span 8;">
+            <!-- tạo bài viết  -->
+            <div class="create-post">
+                <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                    alt="avatar" class="post-avatar">
+                <button class="create-post-btn">Tạo câu hỏi mới của bạn?</button>
+            </div>
+            <!-- bộ lọc  -->
+            <div class="filter-wrapper">
+                <div class="filter-post" onclick="toggleDropdown()">
+                    <span class="filter-text">Bài viết mới</span>
+                    <div class="filter-icon"></div>
+                </div>
+                <div class="filter-dropdown" id="filterDropdown">
+                    <div class="filter-option">Bài viết mới nhất</div>
+                    <div class="filter-option">Tương tác</div>
+                    <div class="filter-option">Phù hợp nhất</div>
+                </div>
+            </div>
+            <!-- bài viết  -->
+            <div class="post-card" style="grid-column: span 8;">
+                <div class="post-header">
+                    <!-- Avatar -->
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+
+                    <!-- Info -->
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Hoàng Minh Sáng</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>125 điểm</span>
+                            </span>
+                        </div>
+                        <div class="post-time">5 phút</div>
+                    </div>
+                    <!-- chức năng  -->
+                    <div class="post-header-options">
+                        <iconify-icon icon="ph:dots-three-vertical-bold" class="more-options-icon" onclick="togglePostOptions(this)" style="transform: rotate(90deg);"></iconify-icon>
+                        <div class="more-options-dropdown hidden">
+                            <div class="option">Sửa</div>
+                            <div class="option">Xóa</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <div class="post-title">Ai đã từng học môn "Cơ học đất" có thể chia sẻ kinh nghiệm ôn thi?</div>
+                    <div class="post-content">
+                        Chào mọi người, mình là sinh viên năm 2 ngành Kỹ thuật xây dựng. Sắp tới mình học môn "Cơ học
+                        đất" mà nghe mấy anh chị bảo hơi "khoai". Bạn nào đã học rồi có thể chia sẻ tài liệu, mẹo học và
+                        đề cương ôn tập không ạ? Cảm ơn nhiều!
+                    </div>
+                    <div class="post-tags">
+                        <span class="post-tag">#onthi</span>
+                        <span class="post-tag">#ctdl</span>
+                        <span class="post-tag">#tailieu</span>
+                    </div>
+                </div>
+                <!-- tương tác  -->
+                <div class="post-actions">
+                    <div class="action like-action" onclick="toggleLike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                        <span class="like-text">125 thích</span>
+                    </div>
+                    <div class="action dislike-action" onclick="toggleDislike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                            style="transform: rotate(180deg);"></iconify-icon>
+                    </div>
+                    <div class="action comment-action comment-toggle-btn">
+                        <iconify-icon icon="iconamoon:comment" class="comment-icon"></iconify-icon>
+                        <span>50 bình luận</span>
+                    </div>
+                </div>
+                <!-- bình luận  -->
+                <div class="comments-section hidden">
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="post-card" style="grid-column: span 8;">
+                <div class="post-header">
+                    <!-- Avatar -->
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.UZHJcUqPmwrb65QCn-an3AHaHa?w=193&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+
+                    <!-- Info -->
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Nguyễn Văn Bắc</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>200 điểm</span>
+                            </span>
+                        </div>
+                        <div class="post-time">5 giờ</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <div class="post-title">Ai đã từng học môn "Cơ học đất" có thể chia sẻ kinh nghiệm ôn thi?</div>
+                    <div class="post-content">
+                        Chào mọi người, mình là sinh viên năm 2 ngành Kỹ thuật xây dựng. Sắp tới mình học môn "Cơ học
+                        đất" mà nghe mấy anh chị bảo hơi "khoai". Bạn nào đã học rồi có thể chia sẻ tài liệu, mẹo học và
+                        đề cương ôn tập không ạ? Cảm ơn nhiều!
+                    </div>
+                    <div class="post-tags">
+                        <span class="post-tag">#onthi</span>
+                        <span class="post-tag">#ctdl</span>
+                        <span class="post-tag">#tailieu</span>
+                    </div>
+                </div>
+                <!-- tương tác  -->
+                <div class="post-actions">
+                    <div class="action like-action" onclick="toggleLike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                        <span class="like-text">125 thích</span>
+                    </div>
+                    <div class="action dislike-action" onclick="toggleDislike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                            style="transform: rotate(180deg);"></iconify-icon>
+                    </div>
+                    <div class="action comment-action comment-toggle-btn">
+                        <iconify-icon icon="iconamoon:comment" class="comment-icon"></iconify-icon>
+                        <span>50 bình luận</span>
+                    </div>
+                </div>
+                <!-- bình luận  -->
+                <div class="comments-section hidden">
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="post-card" style="grid-column: span 8;">
+                <div class="post-header">
+                    <!-- Avatar -->
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.UZHJcUqPmwrb65QCn-an3AHaHa?w=193&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+
+                    <!-- Info -->
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Nguyễn Văn Bắc</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>200 điểm</span>
+                            </span>
+                        </div>
+                        <div class="post-time">5 giờ</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <div class="post-title">Ai đã từng học môn "Cơ học đất" có thể chia sẻ kinh nghiệm ôn thi?</div>
+                    <div class="post-content">
+                        Chào mọi người, mình là sinh viên năm 2 ngành Kỹ thuật xây dựng. Sắp tới mình học môn "Cơ học
+                        đất" mà nghe mấy anh chị bảo hơi "khoai". Bạn nào đã học rồi có thể chia sẻ tài liệu, mẹo học và
+                        đề cương ôn tập không ạ? Cảm ơn nhiều!
+                    </div>
+                    <div class="post-tags">
+                        <span class="post-tag">#onthi</span>
+                        <span class="post-tag">#ctdl</span>
+                        <span class="post-tag">#tailieu</span>
+                    </div>
+                </div>
+                <!-- tương tác  -->
+                <div class="post-actions">
+                    <div class="action like-action" onclick="toggleLike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                        <span class="like-text">125 thích</span>
+                    </div>
+                    <div class="action dislike-action" onclick="toggleDislike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                            style="transform: rotate(180deg);"></iconify-icon>
+                    </div>
+                    <div class="action comment-action comment-toggle-btn">
+                        <iconify-icon icon="iconamoon:comment" class="comment-icon"></iconify-icon>
+                        <span>50 bình luận</span>
+                    </div>
+                </div>
+                <!-- bình luận  -->
+                <div class="comments-section hidden">
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="post-card" style="grid-column: span 8;">
+                <div class="post-header">
+                    <!-- Avatar -->
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.UZHJcUqPmwrb65QCn-an3AHaHa?w=193&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+
+                    <!-- Info -->
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Nguyễn Văn Bắc</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>200 điểm</span>
+                            </span>
+                        </div>
+                        <div class="post-time">5 giờ</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <div class="post-title">Ai đã từng học môn "Cơ học đất" có thể chia sẻ kinh nghiệm ôn thi?</div>
+                    <div class="post-content">
+                        Chào mọi người, mình là sinh viên năm 2 ngành Kỹ thuật xây dựng. Sắp tới mình học môn "Cơ học
+                        đất" mà nghe mấy anh chị bảo hơi "khoai". Bạn nào đã học rồi có thể chia sẻ tài liệu, mẹo học và
+                        đề cương ôn tập không ạ? Cảm ơn nhiều!
+                    </div>
+                    <div class="post-tags">
+                        <span class="post-tag">#onthi</span>
+                        <span class="post-tag">#ctdl</span>
+                        <span class="post-tag">#tailieu</span>
+                    </div>
+                </div>
+                <!-- tương tác  -->
+                <div class="post-actions">
+                    <div class="action like-action" onclick="toggleLike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                        <span class="like-text">125 thích</span>
+                    </div>
+                    <div class="action dislike-action" onclick="toggleDislike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                            style="transform: rotate(180deg);"></iconify-icon>
+                    </div>
+                    <div class="action comment-action comment-toggle-btn">
+                        <iconify-icon icon="iconamoon:comment" class="comment-icon"></iconify-icon>
+                        <span>50 bình luận</span>
+                    </div>
+                </div>
+                <!-- bình luận  -->
+                <div class="comments-section hidden">
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="post-card" style="grid-column: span 8;">
+                <div class="post-header">
+                    <!-- Avatar -->
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.UZHJcUqPmwrb65QCn-an3AHaHa?w=193&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+
+                    <!-- Info -->
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Nguyễn Văn Bắc</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>200 điểm</span>
+                            </span>
+                        </div>
+                        <div class="post-time">5 giờ</div>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <div class="post-title">Ai đã từng học môn "Cơ học đất" có thể chia sẻ kinh nghiệm ôn thi?</div>
+                    <div class="post-content">
+                        Chào mọi người, mình là sinh viên năm 2 ngành Kỹ thuật xây dựng. Sắp tới mình học môn "Cơ học
+                        đất" mà nghe mấy anh chị bảo hơi "khoai". Bạn nào đã học rồi có thể chia sẻ tài liệu, mẹo học và
+                        đề cương ôn tập không ạ? Cảm ơn nhiều!
+                    </div>
+                    <div class="post-tags">
+                        <span class="post-tag">#onthi</span>
+                        <span class="post-tag">#ctdl</span>
+                        <span class="post-tag">#tailieu</span>
+                    </div>
+                </div>
+                <!-- tương tác  -->
+                <div class="post-actions">
+                    <div class="action like-action" onclick="toggleLike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                        <span class="like-text">125 thích</span>
+                    </div>
+                    <div class="action dislike-action" onclick="toggleDislike(this)">
+                        <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                            style="transform: rotate(180deg);"></iconify-icon>
+                    </div>
+                    <div class="action comment-action comment-toggle-btn">
+                        <iconify-icon icon="iconamoon:comment" class="comment-icon"></iconify-icon>
+                        <span>50 bình luận</span>
+                    </div>
+                </div>
+                <!-- bình luận  -->
+                <div class="comments-section hidden">
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Một bình luận -->
+                    <div class="comment">
+                        <div class="comment-avatar">
+                            <img src="https://th.bing.com/th?q=AVT+Anime+%c4%90en+Tr%e1%ba%afng&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=strict&t=1&mw=247"
+                                alt="avatar">
+                        </div>
+                        <div class="comment-body">
+                            <!-- Nội dung chính -->
+                            <div class="comment-content">
+                                <div class="comment-user">
+                                    <span class="user-name">Nguyễn Văn A</span>
+                                    <span class="user-reputation"><iconify-icon icon="ph:medal"></iconify-icon> 42
+                                        điểm</span>
+                                </div>
+                                <div class="comment-text post-content">
+                                    Ngoài ra: Lập trình hướng đối tượng (OOP) nâng cao không chỉ dừng lại ở bốn tính
+                                    chất cơ bản là đóng gói, kế thừa, đa hình và trừu tượng, mà còn mở rộng sang các
+                                    khái niệm như interface (giao diện), lớp trừu tượng, đa hình động (runtime
+                                    polymorphism), và nguyên lý SOLID trong thiết kế phần mềm.
+                                </div>
+                            </div>
+
+                            <!-- tương tác bình luận -->
+                            <div class="comment-actions">
+
+                                <div class="comment-time">2 giờ</div>
+
+                                <div class="action like-action" onclick="toggleLike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="like-icon"></iconify-icon>
+                                    <span class="like-text">12 thích</span>
+                                </div>
+
+                                <div class="action dislike-action" onclick="toggleDislike(this)">
+                                    <iconify-icon icon="iconamoon:like-light" class="dislike-icon"
+                                        style="transform: rotate(180deg);"></iconify-icon>
+                                </div>
+                                <div class="comment-action">Trả lời</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- right -->
+        <div class="cell rightbar" style="grid-column: span 2;">
+            <div class="highlight-section">
+                <div class="section-title">Nổi bật</div>
+                <div class="highlight-tags">
+                    <div class="tag">
+                        <span class="tag-name red-tag">#nghihe</span>
+                        <span class="tag-count">35 bài/ngày</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-name red-tag">#CNTT</span>
+                        <span class="tag-count">20 bài/ngày</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-name red-tag">#hoctap</span>
+                        <span class="tag-count">18 bài/ngày</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-name">#doan</span>
+                        <span class="tag-count">14 bài/ngày</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-name">#traloi</span>
+                        <span class="tag-count">12 bài/ngày</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-name">...</span>
+                    </div>
+                    <div class="tag">
+                        <span class="tag-name">...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phần Sự kiện -->
+            <div class="event-section">
+                <div class="section-title">Sự kiện sắp diễn ra</div>
+
+                <div class="event-image-wrapper">
+                    <img src="data:image/webp;base64,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"
+                        alt="Sự kiện" class="event-image" />
+                </div>
+
+                <div class="event-content">
+                    <h3 class="event-title">OOP chuyên sâu</h3>
+                    <p class="event-date">T7, 21 tháng 6</p>
+                    <p class="event-desc">Design Pattern trong OOP nâng cao</p>
+                    <p class="event-registered">385 người đã đăng ký</p>
+                </div>
+
+                <div class="event-action">
+                    <button class="register-btn">Đăng ký ngay</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+</html>
