@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar {
+    background-color: #004d99;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content {
+    width: auto;
+    max-width: none;
+    padding: 20px 40px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.back-arrow-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.back-arrow-link i {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+.back-arrow-link i:hover {
+    color: #333;
+}
+
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.btn-lock {
+    background-color: #b0b0b0;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.pagination {
+    display: flex;
+    /* Thay đổi ở đây */
+    justify-content: center; /* Căn giữa các mục con */
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.pagination i {
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    transition: color 0.2s ease-in-out;
+}
+
+.pagination i:hover:not(.disabled) {
+    color: #333;
+}
+
+.pagination i.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+.modal {
+    display: none; /* CHANGED: This ensures it's hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    /* Remove display: flex here, it will be added by JS when needed */
+    align-items: center; /* These are still useful for centering when shown */
+    justify-content: center; /* These are still useful for centering when shown */
+}
+
+/* The rest of the modal styles remain the same */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    flex-direction: column;
+}
+
+.modal-icon-error {
+    color: #e74c3c;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-red:hover {
+    background-color: #c0392b;
+}
+
+.btn-grey {
+    background-color: #808080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-grey:hover {
+    background-color: #666666;
+}
+.toast-notification {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px; /* Distance from bottom */
+    right: 30px; /* Distance from right */
+    background-color: #3498db; /* Blue background */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 16px;
+    z-index: 1001; /* Above modal if both were open */
+    opacity: 0; /* Start invisible for fade-in effect */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for showing/hiding */
+}
+
+.toast-notification.show {
+    display: block; /* Show the toast */
+    opacity: 1; /* Make it fully visible */
+}
+.lock-modal-close-button {
+    /* To differentiate if you want different close button style, otherwise remove */
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.lock-modal-close-button:hover,
+.lock-modal-close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.lock-duration-select-container {
+    margin-bottom: 30px; /* Space below select box */
+}
+
+.custom-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none; /* Remove default arrow in some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #004d99;
+    box-shadow: 0 0 0 2px rgba(0, 77, 153, 0.2);
+}
+
+/* NEW: Style for disabled Lock button */
+.btn-lock.disabled {
+    background-color: #cccccc; /* Lighter grey for disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
