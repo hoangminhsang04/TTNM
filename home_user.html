@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="home_user.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="home_user.js"></script>
 
 </head>
@@ -31,8 +32,34 @@
                 <div class="cell user-area" style="grid-column: span 2;">
                     <div class="user-flex">
                         <!-- thông báo  -->
-                        <div class="notify-circle">
+                        <div class="notify-circle" onclick="toggleNotificationDropdown()">
                             <iconify-icon icon="mdi:bell-outline" width="20" height="20"></iconify-icon>
+                            <!-- Dropdown thông báo -->
+                            <div id="notificationDropdown" class="notification-dropdown hidden">
+                                <div class="dropdown-title">Thông báo</div>
+                                <div class="notification-item">
+                                    <div class="post-avatar">
+                                        <img src="https://th.bing.com/th/id/OIP.5tDu0aMiu5w30u7rsiGGAAHaFi?w=236&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                                            alt="avatar">
+                                    </div>
+                                    <span>Cô hiệu phó đã bình luận về bài viết của bạn</span>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="post-avatar">
+                                        <img src="data:image/webp;base64,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"
+                                            alt="avatar">
+                                    </div>
+                                    <span>Nguyễn Thị Tuyết đã thích bài viết của bạn</span>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="post-avatar">
+                                        <img src="https://th.bing.com/th/id/OIP.jqpIMAdrOCPhvFqD__xJKAHaE8?w=302&h=187&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                                            alt="avatar">
+                                    </div>
+                                    <span>Thầy hiệu trưởng đã thích bình luận của bạn</span>
+                                </div>
+                                <!-- Thêm các dòng thông báo khác nếu muốn -->
+                            </div>
                         </div>
                         <!-- ảnh đại diện  -->
                         <div class="avatar-wrapper">
@@ -128,8 +155,9 @@
             <div class="create-post">
                 <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
                     alt="avatar" class="post-avatar">
-                <button class="create-post-btn">Tạo câu hỏi mới của bạn?</button>
+                <button class="create-post-btn" onclick="openPostModal()">Tạo câu hỏi mới của bạn?</button>
             </div>
+
             <!-- bộ lọc  -->
             <div class="filter-wrapper">
                 <div class="filter-post" onclick="toggleDropdown()">
@@ -168,8 +196,8 @@
                         <iconify-icon icon="ph:dots-three-vertical-bold" class="more-options-icon"
                             onclick="togglePostOptions(this)" style="transform: rotate(90deg);"></iconify-icon>
                         <div class="more-options-dropdown hidden">
-                            <div class="option">Sửa</div>
-                            <div class="option">Xóa</div>
+                            <div class="option" onclick="openEditPostModal()">Sửa</div>
+                            <div class="option" onclick="openDeletePopup()">Xóa</div>
                         </div>
                     </div>
                 </div>
@@ -251,7 +279,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Một bình luận -->
                     <div class="comment">
                         <div class="comment-avatar">
@@ -303,6 +331,7 @@
                 </div>
 
             </div>
+            <!-- bài viết  -->
             <div class="post-card" style="grid-column: span 8;">
                 <div class="post-header">
                     <!-- Avatar -->
@@ -596,6 +625,7 @@
                 </div>
 
             </div>
+            <!-- bài viết  -->
             <div class="post-card" style="grid-column: span 8;">
                 <div class="post-header">
                     <!-- Avatar -->
@@ -889,6 +919,7 @@
                 </div>
 
             </div>
+            <!-- bài viết  -->
             <div class="post-card" style="grid-column: span 8;">
                 <div class="post-header">
                     <!-- Avatar -->
@@ -1182,6 +1213,7 @@
                 </div>
 
             </div>
+            <!-- bài viết  -->
             <div class="post-card" style="grid-column: span 8;">
                 <div class="post-header">
                     <!-- Avatar -->
@@ -1531,6 +1563,183 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+    <!-- Modal tạo bài viết  -->
+    <div id="postModalOverlay" class="modal-overlay hidden">
+        <div class="post-modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">Tạo bài viết</h3>
+                <button class="modal-cancel-btn" onclick="closePostModal()">✕</button>
+            </div>
+
+            <!-- Container -->
+            <div class="modal-body">
+                <!-- Thông tin người dùng -->
+                <!-- Avatar -->
+                <div class="post-header">
+                    <!-- Avatar -->
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+                    <!-- Info -->
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Hoàng Minh Sáng</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>125 điểm</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiêu đề & nội dung -->
+                <div class="post-inputs">
+                    <input type="text" id="postTitle" class="input-title" placeholder="Nhập tiêu đề...">
+                    <textarea id="postContent" class="input-content" placeholder="Nhập nội dung..."></textarea>
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+                <div class="footer-meta">
+                    <span>Thêm vào bài viết của bạn</span>
+                    <div class="footer-icons">
+                        <button class="icon-btn" title="Gắn thẻ" onclick="toggleTagPopup()">
+                            <span class="iconify tag-icon" data-icon="mdi:tag"></span>
+                        </button>
+                        <button class="icon-btn" title="Thêm ảnh">
+                            <span class="iconify pic-icon" data-icon="mingcute:pic-fill"></span>
+                        </button>
+                        <button class="icon-btn" title="Chọn thư mục">
+                            <span class="iconify folder-icon" data-icon="material-symbols:folder"></span>
+                        </button>
+                    </div>
+                </div>
+                <button id="submitPostBtn" class="submit-post-btn " onclick="submitPost()">Đăng</button>
+            </div>
+
+            <!-- Popup Thêm Thẻ -->
+            <div id="tagPopup" class="modal-popup hidden">
+                <div class="post-modal">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Thêm thẻ</h3>
+                        <button class="modal-cancel-btn" onclick="closeTagPopup()">✕</button>
+                    </div>
+                    <!-- tìm kiếm  -->
+                    <div class="search-wrapper">
+                        <iconify-icon icon="ic:round-search" class="search-icon"></iconify-icon>
+                        <input type="text" placeholder="Tìm kiếm thẻ">
+                    </div>
+                    <!-- Danh sách thẻ đã chọn -->
+                    <div class="tag-section">
+                        <span>Đã chọn:</span>
+                        <div class="selected-tags">
+                            <!-- Các thẻ đã chọn sẽ được thêm ở đây -->
+                            <!-- <div class="tag-item">Toán</div> -->
+                        </div>
+                    </div>
+                    <!-- Danh sách tất cả thẻ -->
+                    <div class="tag-section">
+                        <div class="tag-grid">
+                            <div class="tag-item">Công nghệ</div>
+                            <div class="tag-item">Toán</div>
+                            <div class="tag-item">Học tập</div>
+                            <div class="tag-item">Kỹ năng</div>
+                            <div class="tag-item">JavaScript</div>
+                            <div class="tag-item">Thiết kế</div>
+                            <div class="tag-item">CSS</div>
+                            <div class="tag-item">Python</div>
+                            <!-- Thêm thẻ tùy ý -->
+                        </div>
+                    </div>
+                    <!-- nút  -->
+                    <div class="modal-footer">
+                        <button class="submit-post-btn" onclick="addTag()">Thêm</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- modal xóa  -->
+    <div id="deletePopup" class="delete-popup hidden">
+        <div class="delete-post-modal">
+            <div class="delete-modal-header">
+                <h3 class="delete-modal-title">Xóa bài viết?</h3>
+                <button class="delete-modal-cancel-btn" onclick="closeDeletePopup()">✕</button>
+            </div>
+            <div class="delete-modal-body">
+                <p>Xóa bài viết sẽ xóa vĩnh viễn và không thể khôi phục lại<br>
+                    Bạn có chắc chắn muốn xóa không?</p>
+            </div>
+            <div class="delete-modal-footer">
+                <button class="delete-cancel-btn" onclick="closeDeletePopup()">Hủy</button>
+                <button class="delete-confirm-btn" onclick="confirmDelete()">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+    <!-- modal sửa  -->
+    <div id="editPostModalOverlay" class="modal-overlay hidden">
+        <div class="post-modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <h3 class="modal-title">Sửa bài viết</h3>
+                <button class="modal-cancel-btn" onclick="closeEditPostModal()">✕</button>
+            </div>
+
+            <!-- Container -->
+            <div class="modal-body">
+                <!-- Thông tin người dùng -->
+                <div class="post-header">
+                    <div class="post-avatar">
+                        <img src="https://th.bing.com/th/id/OIP.7Cb5PBLikpovOIgwkF2YkgHaHW?w=177&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                            alt="avatar">
+                    </div>
+                    <div class="post-user-info">
+                        <div class="post-name-rep">
+                            <span class="user-name">Hoàng Minh Sáng</span>
+                            <span class="user-reputation">
+                                <iconify-icon icon="ph:medal"></iconify-icon>
+                                <span>125 điểm</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiêu đề & nội dung -->
+                <div class="post-inputs">
+                    <input type="text" id="editTitle" class="input-title" placeholder="Nhập tiêu đề..."
+                        value="Ai đã từng học môn Cơ học đất có thể chia sẻ kinh nghiệm ôn thi ?">
+                    <textarea id="editContent" class="input-content"
+                        placeholder="Nhập nội dung...">Chào mọi người, mình là sinh viên năm 2 ngành Kỹ thuật xây dựng. Sắp tới mình học môn "Cơ học đất" mà nghe mấy anh chị bảo hơi "khoai". Bạn nào đã học rồi có thể chia sẻ tài liệu, mẹo học và đề cương ôn tập không ạ? Cảm ơn nhiều!</textarea>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+                <div class="footer-meta">
+                    <span>Thêm vào bài viết của bạn</span>
+                    <div class="footer-icons">
+                        <button class="icon-btn" title="Gắn thẻ" onclick="toggleTagPopup()">
+                            <span class="iconify tag-icon" data-icon="mdi:tag"></span>
+                        </button>
+                        <button class="icon-btn" title="Thêm ảnh">
+                            <span class="iconify pic-icon" data-icon="mingcute:pic-fill"></span>
+                        </button>
+                        <button class="icon-btn" title="Chọn thư mục">
+                            <span class="iconify folder-icon" data-icon="material-symbols:folder"></span>
+                        </button>
+                    </div>
+                </div>
+                <button id="submitEditPostBtn" class="submit-post-btn" onclick="submitEditPost()">Lưu</button>
+            </div>
         </div>
     </div>
 

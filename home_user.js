@@ -1,77 +1,155 @@
 // Toggle dropdown bộ lọc
-function toggleDropdown() {
+function toggleFilterDropdown() {
   const dropdown = document.getElementById('filterDropdown');
-  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  dropdown.classList.toggle('hidden');
 }
 
-// Ẩn dropdown bộ lọc nếu click ra ngoài
-document.addEventListener('click', function (e) {
-  const filterWrapper = document.querySelector('.filter-wrapper');
-  if (filterWrapper && !filterWrapper.contains(e.target)) {
-    const dropdown = document.getElementById('filterDropdown');
-    if (dropdown) {
-      dropdown.style.display = 'none';
-    }
-  }
-});
-
-// Toggle Like
+// Toggle Like hoặc Dislike (áp dụng cho cả bài viết & bình luận)
 function toggleLike(element) {
   const parent = element.closest('.post-actions') || element.closest('.comment-actions');
-  const dislike = parent.querySelector('.dislike-action');
-
+  parent.querySelector('.dislike-action')?.classList.remove('disliked');
   element.classList.toggle('liked');
-  if (dislike) dislike.classList.remove('disliked');
 }
-
-// Toggle Dislike
 function toggleDislike(element) {
   const parent = element.closest('.post-actions') || element.closest('.comment-actions');
-  const like = parent.querySelector('.like-action');
-
+  parent.querySelector('.like-action')?.classList.remove('liked');
   element.classList.toggle('disliked');
-  if (like) like.classList.remove('liked');
 }
 
-// Toggle hiển thị bình luận
+// Ẩn/hiện phần bình luận của bài viết
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.comment-toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const postCard = btn.closest('.post-card');
-      const commentSection = postCard.querySelector('.comments-section');
-      if (commentSection) {
-        commentSection.classList.toggle('hidden');
-      }
+      const sec = btn.closest('.post-card')?.querySelector('.comments-section');
+      sec?.classList.toggle('hidden');
     });
   });
 });
 
-// Toggle dropdown 3 chấm (bài viết)
+// Toggle menu 3 chấm trong phần bài viết
 function togglePostOptions(icon) {
-  const dropdown = icon.nextElementSibling;
-  dropdown.classList.toggle("hidden");
+  icon.nextElementSibling.classList.toggle('hidden');
 }
 
-// Ẩn dropdown 3 chấm nếu click ra ngoài
-document.addEventListener("click", function (e) {
-  document.querySelectorAll(".post-header-options").forEach(container => {
-    if (!container.contains(e.target)) {
-      const dropdown = container.querySelector(".more-options-dropdown");
-      if (dropdown) dropdown.classList.add("hidden");
-    }
-  });
-});
+// Toggle menu 3 chấm trong phần bình luận
 function toggleCommentOptions(icon) {
-  const dropdown = icon.nextElementSibling;
-  dropdown.classList.toggle("hidden");
+  icon.nextElementSibling.classList.toggle('hidden');
 }
 
-// Ẩn dropdown nếu click ra ngoài
-document.addEventListener("click", function (e) {
-  document.querySelectorAll(".comment-header-options").forEach(container => {
-    if (!container.contains(e.target)) {
-      const dropdown = container.querySelector(".more-options-dropdown");
-      if (dropdown) dropdown.classList.add("hidden");
+// Mở/đóng modal tạo bài viết
+function openPostModal() {
+  document.getElementById('postModalOverlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  document.body.style.paddingRight = '15px';
+}
+
+function closePostModal() {
+  document.getElementById('postModalOverlay').classList.add('hidden');
+  document.body.style.overflow = '';
+  document.body.style.paddingRight = '';
+}
+
+function submitPost() {
+  alert('Bài viết đã được đăng!');
+  closePostModal();
+}
+
+// Ẩn mọi dropdown khi click ngoài
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.filter-wrapper')) {
+    document.getElementById('filterDropdown')?.classList.add('hidden');
+  }
+  document.querySelectorAll('.post-header-options, .comment-header-options')
+    .forEach(container => {
+      if (!container.contains(e.target)) {
+        container.querySelector('.more-options-dropdown')?.classList.add('hidden');
+      }
+    });
+
+  const overlay = document.getElementById('postModalOverlay');
+
+  if (overlay) {
+    overlay.addEventListener('click', function (e) {
+      const modal = overlay.querySelector('.post-modal');
+      // Nếu click KHÔNG nằm trong modal, thì đóng
+      if (modal && !modal.contains(e.target)) {
+        closePostModal();
+      }
+    });
+  }
+});
+const titleInput = document.getElementById('postTitle');
+const contentInput = document.getElementById('postContent');
+const submitBtn = document.getElementById('submitBtn');
+
+function checkInput() {
+  const title = titleInput.value.trim();
+  const content = contentInput.value.trim();
+
+  if (title && content) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+
+titleInput.addEventListener('input', checkInput);
+contentInput.addEventListener('input', checkInput);
+
+function toggleTagPopup() {
+  document.getElementById('tagPopup').classList.toggle('hidden');
+}
+
+function closeTagPopup() {
+  document.getElementById('tagPopup').classList.add('hidden');
+}
+
+function addTag() {
+  const tag = document.querySelector('.tag-input').value.trim();
+  if (tag) {
+    alert(`Đã thêm thẻ: ${tag}`);
+    // Thêm xử lý thêm thẻ ở đây nếu cần
+    document.querySelector('.tag-input').value = '';
+    closeTagPopup();
+  }
+}
+
+function openDeletePopup() {
+  document.getElementById('deletePopup').classList.remove('hidden');
+}
+
+function closeDeletePopup() {
+  document.getElementById('deletePopup').classList.add('hidden');
+}
+
+function confirmDelete() {
+  alert("Xóa thành công!");
+  closeDeletePopup();
+}
+
+// sửa bài viết 
+function openEditPostModal() {
+  document.getElementById("editPostModalOverlay").classList.remove("hidden");
+}
+
+function closeEditPostModal() {
+  document.getElementById("editPostModalOverlay").classList.add("hidden");
+}
+
+function submitEditPost() {
+  // Xử lý logic lưu bài viết đã sửa tại đây (nếu cần)
+  alert("Đã lưu bài viết");
+  closeEditPostModal();
+}
+function toggleNotificationDropdown() {
+    const dropdown = document.getElementById("notificationDropdown");
+    dropdown.classList.toggle("hidden");
+}
+document.addEventListener("click", function (event) {
+    const dropdown = document.getElementById("notificationDropdown");
+    const bell = document.querySelector(".notify-circle");
+
+    if (!bell.contains(event.target)) {
+        dropdown.classList.add("hidden");
     }
-  });
 });
